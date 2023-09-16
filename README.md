@@ -11,7 +11,7 @@
 
 Example of Invoices that need to be scraped (*required data is highlighted*): 
 
-![Без назви-1.png](C:\Users\temak\OneDrive\Рабочий%20стол\Без%20назви-1.png)
+![Inv](assets/inv.png)
 
 Program starts with converting PDF file to text using **pdfplumber** library of python.
 
@@ -46,7 +46,7 @@ vessel_name = re.findall(r"Vessel\s*Name/Description\s*:\s*(.*)", text)[0]
 
 After going through the cycle with all pdf files given by client we got this pandas dataframe:
 
-![](C:\Users\temak\AppData\Roaming\marktext\images\2023-09-15-10-31-19-image.png)
+![](assets/df.png)
 
 However some rows are empty! That's because some pdf files are secured and cannot be converted to text with pdfplumber or other libraries for manipulating pdf files. 
 
@@ -81,8 +81,8 @@ def perform_ocr(image):
 
 After running cycle with my script through filtered Invoices:
 
-![](C:\Users\temak\AppData\Roaming\marktext\images\2023-09-15-10-39-43-image.png)
+![](assets/ocr.png)
 
 Final result was requested by client in a form of excel table:
 
-![](C:\Users\temak\AppData\Roaming\marktext\images\2023-09-15-10-42-01-image.png)
+![](assets/excel.png)
